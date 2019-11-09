@@ -1,0 +1,29 @@
+#container{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    width:600px;
+    height:150px;
+    padding:5px;
+    margin:0px 5px 0px ;
+    
+   
+}
+#container li{
+    border: white solid 2px;
+    border-radius: 5px;
+    background-color: white;
+    position: relative;
+    text-align: center;
+    line-height: 80px;
+    color:black;
+    width:70px;
+    height:80px;
+    
+}
+#container li a:hover{
+    background-color: chartreuse;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #nav{
+        width:200px;
+        height:100px;
+        background-color: aqua;
+    }
+</style>
+<body>
+    
+    <ul id="nav">
+        <li >爱好</li>
+        <li>评论</li>
+        <li>运动</li>
+    </ul>
+</div>    
+    <script type="text/javascript">
+    //获取nav
+       
+        //另一个创建首页标签
+        var otest = document.getElementById('nav');
+        var newLi = document.createElement('li');
+        otest.appendChild(newLi);
+        console.log(newLi)
+        var liText1 = document.createTextNode('关于');
+        newLi.appendChild(liText1);
+        console.log(liText1);
+        //添加首页标签
+        var ul = document.getElementById('nav');
+        var list = document.createElement('li');
+        ul.insertBefore(list,ul.firstChild);
+        console.log(list);
+        var liText2 =document.createTextNode('首页');
+        list.appendChild(liText2);
+        console.log(liText2);
+        //删除评论标签
+        
+        var li= document.getElementById('nav');
+        var lis =li.children
+        li.removeChild(lis[2]);
+        
+        
+        //更改运动
+        
+        var item = document.getElementById("nav");
+        
+        var newnode=document.createTextNode("文章");
+        item.replaceChild(newnode,item.childNodes[4]); 
+        
+    
+
+
+    </script>
+</body>
+</html>

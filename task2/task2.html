@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        position: relative;
+        margin:auto;
+        background-color: aqua;
+        border-radius: 2px;
+        width:60px;
+        height:30px;
+        opacity:0.8 ;
+
+    }
+</style>
+<body>
+    <button id="btn">submit</button>
+</body>
+<script type="text/javascript">
+var btn =document.getElementById('btn');
+btn.onclick = function(){
+    btn.style.opacity="0.5";
+    var text = document.createTextNode('我的透明度从0.8变成0.5了');
+    
+    console.log(text)
+
+}
+
+</script>
+</html>

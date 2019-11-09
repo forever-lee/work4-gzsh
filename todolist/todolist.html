@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="content">
+        <button id="add">添加</button>
+        <p>点击条目删除</p>
+      </div>
+      <ul id="todoList">
+        
+        
+      </ul>
+</body>
+<script type="text/javascript">
+const addButton = document.getElementById('add');
+const inputElement = document.getElementById('content');
+const todoListDom = document.getElementById('todoList');
+
+
+// 新增方法
+function addItem(content) {
+  let todoItem = document.createElement('li');
+  todoItem.innerText = content;
+  document.getElementById('todoList').appendChild(todoItem);
+}
+
+// 删除方法
+function deleteItem(element) {
+  element.remove();
+}
+//修改方法
+function revamp(elemnet){
+    var otest =document.getElementById('li');
+    var node =document.getElementById('todoItem');
+    var newText =document.createElement('list');
+    newText.innerHTML='';
+    otest.appendChild(newText);
+}
+// 点击添加按钮
+addButton.addEventListener('click', () => {
+  if(inputElement.value) {
+    addItem(inputElement.value.trim());
+  }
+})
+
+// 点击条目删除
+todoList.addEventListener('click', (event) => {
+  if(event.target.tagName === 'LI') {
+    deleteItem(event.target);
+  }
+}, true);
+//
+todoList.addEventListener('click', (event) => {
+  if(event.target.tagName === 'LIST') {
+    revamp(event.target);
+  }
+}, true);
+
+
+</script>
+</html>

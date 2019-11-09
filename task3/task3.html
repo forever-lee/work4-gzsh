@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task3</title>
+</head>
+<link href="task3.css" rel="stylesheet">
+<body>
+    <ul id="container">
+        <li><a class="item">text1</a></li>
+        <li><a class="item">text2</a></li>
+        <li><a class="item">text3</a></li>
+        <li><a class="item">text4</a></li>
+        <li><a class="item">text5</a></li>
+        
+        
+    </ul>
+    <script type="text/javascript">
+        var btn =document.getElementsByClassName('item')[0];
+            btn.addEventListener('click',function event(){
+                let liArr =['list1','list2','list3','list4','list5'];
+                var list = document.getElementsByClassName('item');
+              
+                for(let i = 0;i<list.length;i++){
+                    list[i].innerHTML = liArr[i];  
+                    $(this).addClass('item').slibing().removeClass('item').end();    
+                }  
+                 
+            },false);
+    </script>
+    
+</body>
+</html>
